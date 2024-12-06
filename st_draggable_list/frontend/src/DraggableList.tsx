@@ -24,9 +24,8 @@ function defaultRenderItem(props: InnerThemeProps, item: Item): React.ReactEleme
             <Typography
                 color={props.theme.textColor}
                 fontFamily={props.theme.font}
-            >
-                {item.name}
-            </Typography>
+                dangerouslySetInnerHTML={{ __html: item.name }}
+            />
         </Paper>
     )
 }
